@@ -1,0 +1,96 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOv0PZrtNHMPuHUKcQiofUc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jarvis1-tech/cs1q4practicetest/blob/main/cs1q4practest\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3bfe39b3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e15efbab-157d-41f2-ff2d-4c846387cffc"
+      },
+      "source": [
+        "def number_evaluator():\n",
+        "  print(\"Welcome to the Simple Number Evaluator!\")\n",
+        "\n",
+        "  num_numbers = 0\n",
+        "  while num_numbers < 1:\n",
+        "    try:\n",
+        "      num_numbers = int(input(\"How many numbers do you want to enter?\"))\n",
+        "      if num_numbers < 1:\n",
+        "        print(\"Please enter a number greater than zero.\")\n",
+        "    except ValueError:\n",
+        "      print(\"That's not a whole number.\")\n",
+        "  total = 0\n",
+        "  print(f\"Let's enter {num_numbers} numbers.\")\n",
+        "  for i in range(num_numbers):\n",
+        "    number = 0\n",
+        "    while True:\n",
+        "      try:\n",
+        "        number = int(input(f\"Enter number {i + 1}: \"))\n",
+        "        break\n",
+        "      except ValueError:\n",
+        "        print(\"That's not a whole number. Please try again.\")\n",
+        "    if number % 2 == 0:\n",
+        "      print(f\"{number} is an even number.\")\n",
+        "    else:\n",
+        "      print(f\"{number} is an odd number.\")\n",
+        "    total += number\n",
+        "  print(\"Results:\")\n",
+        "  print(f\"The sum of all your numbers is: {total}\")\n",
+        "\n",
+        "  if num_numbers > 0:\n",
+        "    average = total / num_numbers\n",
+        "    print(f\"The average of all your numbers is: {average:.2f}\")\n",
+        "  else:\n",
+        "    print(\"ERROR: No numbers were entered\")\n",
+        "number_evaluator()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to the Simple Number Evaluator!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "IwYozb-QPsvz"
+      },
+      "outputs": [],
+      "source": []
+    }
+  ]
+}
